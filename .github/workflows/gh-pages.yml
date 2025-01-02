@@ -6,22 +6,27 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@master
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@master
         with:
-          python-version: "3.9"
-
+          python-version: "3.10"
       - name: Install dependencies
         run: pip install mkdocs mkdocs-material
-
-      - name: Build site
-        run: mkdocs build --strict
-
-      - name: Deploy to GitHub Pages
+      - name: Run unit tests and linters
+        run: |
+          pytest
+      - name: Build package & publish to PyPi
+        env:
+          TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: |
+          pip3 install --upgrade wheel twine build
+          python -m build
+          twine upload dist/*
+      - name: Deploy mkdocs site
         run: |
           mkdocs gh-deploy --force
