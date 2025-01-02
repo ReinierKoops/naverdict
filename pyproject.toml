@@ -44,10 +44,12 @@ dev = [
     "isort>=5.0.0",
     "pre-commit>=4.0.0",
     "ruff>=0.8.0",
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.0.0",
 ]
 
 [tool.setuptools.packages.find]
-exclude = ["tests"]
+exclude = ["tests", "docs"]
 
 [tool.setuptools.dynamic]
 version = {attr = "naverdict.__version__"}
