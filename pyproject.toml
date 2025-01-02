@@ -53,7 +53,7 @@ exclude = ["tests"]
 version = {attr = "naverdic.__version__"}
 
 [tool.ruff]
-line-length = 120
+line-length = 88
 extend-exclude = ["docs", "mkdocs.yml", ".github", "*md", "LICENSE", ".pre-commit-config.yaml", ".gitignore", "data", "*.css", "*.zip", "MANIFEST.in"]
 force-exclude = true
 

@@ -43,7 +43,9 @@ def insert_search_word(search_word: str) -> str:
     return naver_endic_url
 
 
-def webdriver_response_naver_endic_url(naver_endic_url: str, headless: bool = True) -> str:
+def webdriver_response_naver_endic_url(
+    naver_endic_url: str, headless: bool = True
+) -> str:
     """Get the Naver Dictionary response based on your chosen word.
 
     Args:
@@ -70,7 +72,9 @@ def webdriver_response_naver_endic_url(naver_endic_url: str, headless: bool = Tr
 
         # wait for element to appear instead of doing a static sleep
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#searchPage_mean > div > div > div.origin > a"))
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "#searchPage_mean > div > div > div.origin > a")
+            )
         )
 
         # Get the rendered HTML
