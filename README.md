@@ -17,18 +17,18 @@ pip install naverdic
 Using this as a Python package you can use:
 
 ```python
-from naverdic.search import search
+>>> from naverdic.search import search
 
-search("하다")
+>>> search("하다")
 ```
 ```
     ["do", "have", "give", "make", "play"]
 ```
 
-Using this as a CMD you can use:
+Using this as a CMD/CLI you can use:
 
 ```bash
-naverdic 하다
+$ naverdic 하다
 ```
 ```
     do
