@@ -1,0 +1,39 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - "v*" # e.g. push a tag like v1.2.3 to trigger
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install build twine pytest
+          # If you have additional dependencies or a requirements file, install them here
+
+      - name: Run tests
+        run: pytest
+        # If any test fails, the workflow stops here, so nothing gets published.
+
+      - name: Build the package
+        run: python -m build
+        # This creates dist/*.tar.gz and dist/*.whl
+
+      - name: Publish to PyPI (using API token)
+        run: twine upload dist/*
+        env:
+          TWINE_USERNAME: "__token__"
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}

@@ -1,5 +1,5 @@
 import click
-from naverdic.search import search
+from naverdict.search import search
 
 
 @click.command()

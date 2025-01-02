@@ -1,9 +1,9 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "naverdic"
+name = "naverdict"
 dynamic = ["version"]
 requires-python= ">=3.10"
 description = "Access Naver dictionary using Python"
@@ -31,11 +31,11 @@ dependencies = [
 ]
 
 [project.scripts]
-naverdic = "naverdic.cli:main"
+naverdict = "naverdict.cli:main"
 
 [project.urls]
-Repository = "https://github.com/ReinierKoops/naverdic.git"
-Changelog = "https://github.com/ReinierKoops/naverdic/releases"
+Repository = "https://github.com/ReinierKoops/naverdict.git"
+Changelog = "https://github.com/ReinierKoops/naverdict/releases"
 
 [project.optional-dependencies]
 dev = [
@@ -50,7 +50,7 @@ dev = [
 exclude = ["tests"]
 
 [tool.setuptools.dynamic]
-version = {attr = "naverdic.__version__"}
+version = {attr = "naverdict.__version__"}
 
 [tool.ruff]
 line-length = 88

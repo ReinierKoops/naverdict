@@ -7,8 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-from naverdic.constants import NAVER_ENDIC_URL
-from naverdic.exceptions import NaverdicConnectionError
+from naverdict.constants import NAVER_ENDIC_URL
+from naverdict.exceptions import NaverDictConnectionError
 
 
 def search(search_word: str, headless: bool = True) -> list[str]:
@@ -80,7 +80,7 @@ def webdriver_response_naver_endic_url(
         # Get the rendered HTML
         return driver.page_source
     except Exception:
-        raise NaverdicConnectionError()
+        raise NaverDictConnectionError()
     finally:
         driver.quit()
 

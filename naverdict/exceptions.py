@@ -1,7 +1,7 @@
-from naverdic.constants import CONNECTION_ERROR_MESSAGE
+from naverdict.constants import CONNECTION_ERROR_MESSAGE
 
 
-class NaverdicConnectionError(Exception):
+class NaverDictConnectionError(Exception):
     """
     Exception raised when network is unconnected
     """

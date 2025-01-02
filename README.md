@@ -9,7 +9,7 @@ Based on the [NDic](https://github.com/jupiny/ndic) repository by [SeunghwanJoo]
 Install via pip:
 
 ```cmd
-pip install naverdic
+pip install naverdict
 ```
 
 # How to use
@@ -17,7 +17,7 @@ pip install naverdic
 Using this as a Python package you can use:
 
 ```python
->>> from naverdic.search import search
+>>> from naverdict.search import search
 
 >>> search("하다")
 ```
@@ -28,7 +28,7 @@ Using this as a Python package you can use:
 Using this as a CMD/CLI you can use:
 
 ```bash
-$ naverdic 하다
+$ naverdict 하다
 ```
 ```
 do

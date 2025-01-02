@@ -1,6 +1,6 @@
 import pytest
 
-from naverdic.search import search
+from naverdict.search import search
 
 
 @pytest.mark.parametrize(
