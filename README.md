@@ -22,7 +22,7 @@ Using this as a Python package you can use:
 >>> search("하다")
 ```
 ```
-    ["do", "have", "give", "make", "play"]
+["do", "have", "give", "make", "play"]
 ```
 
 Using this as a CMD/CLI you can use:
@@ -31,9 +31,9 @@ Using this as a CMD/CLI you can use:
 $ naverdic 하다
 ```
 ```
-    do
-    have
-    give
-    make
-    play
+do
+have
+give
+make
+play
 ```
