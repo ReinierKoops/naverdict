@@ -34,6 +34,7 @@ dependencies = [
 naverdict = "naverdict.cli:main"
 
 [project.urls]
+Documentation = "https://reinierkoops.github.io/naverdict/"
 Repository = "https://github.com/ReinierKoops/naverdict.git"
 Changelog = "https://github.com/ReinierKoops/naverdict/releases"
 
