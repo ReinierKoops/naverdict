@@ -30,3 +30,10 @@ Using this as a CMD you can use:
 ```bash
     naverdic 하다
 ```
+```
+do
+have
+give
+make
+play
+```
