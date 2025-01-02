@@ -19,3 +19,5 @@ jobs:
       - name: Deploy mkdocs site
         run: |
           mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
