@@ -1,9 +1,8 @@
 name: Publish to PyPI
 
 on:
-  push:
-    tags:
-      - "v*" # e.g. push a tag like v1.2.3 to trigger
+  release:
+    types: [created]
 
 jobs:
   build-and-publish:
@@ -22,7 +21,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install build twine pytest
-          # If you have additional dependencies or a requirements file, install them here
+          pip install -e .
 
       - name: Run tests
         run: pytest
