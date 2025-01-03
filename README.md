@@ -1,10 +1,15 @@
-# Introduction
+# Naverdict
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/naverdict)
+![PyPI](https://img.shields.io/pypi/v/naverdict)
+![PyPI - License](https://img.shields.io/pypi/l/naverdict)
+
+## Introduction
 
 Search of both English-Korean and Korean-English dictionaries of endic.naver.com
 
 Based on the [NDic](https://github.com/jupiny/ndic) repository by [SeunghwanJoo](https://github.com/jupiny). However, this library was outdated, so this is a "updated" version of it.
 
-# Installation
+## Installation
 
 Install via pip:
 
@@ -12,7 +17,7 @@ Install via pip:
 pip install naverdict
 ```
 
-# How to use
+## How to use
 
 Using this as a Python package you can use:
 
